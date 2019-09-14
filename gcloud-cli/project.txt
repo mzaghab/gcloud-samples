@@ -1,0 +1,5 @@
+export PROJECT_ID=cloudera-director-2019
+gcloud projects create $PROJECT_ID
+
+gcloud projects delete $PROJECT_ID
+

@@ -1,0 +1,22 @@
+- networks list
+    gcloud compute networks list
+
+- Create an auto mode network using the following gcloud command:
+    gcloud compute networks create [NETWORK_NAME] \
+        --subnet-mode=auto \
+        --bgp-routing-mode=[DYNAMIC_ROUTING_MODE]
+
+- Creating a custom mode network
+    gcloud compute networks create [NETWORK_NAME] \
+        --subnet-mode=custom \
+        --bgp-routing-mode=[DYNAMIC_ROUTING_MODE]
+
+
+- subnet list 
+    gcloud compute networks subnets list
+
+- Adding subnets
+    gcloud compute networks subnets create [SUBNET_NAME] --network=[NETWORK] --range=[PRIMARY_RANGE] --region=[REGION]
+
+- Deleting subnets
+    gcloud compute networks subnets delete [SUBNET_NAME] --region=[REGION]

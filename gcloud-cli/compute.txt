@@ -1,0 +1,21 @@
+// CREATE INSTANCE WITH 4 vCPUs and 5 GB MEMORY
+gcloud compute instances create my-vm --custom-cpu 4 --custom-memory 5
+
+// ENABLE PREEMPTIBLE OPTION
+gcloud compute instances create my-vm --zone us-central1-b --preemptible
+
+// If you prefer to use ssh and scp directly, gcloud compute can generate an SSH configuration file that contains host aliases for your instances with authentication configuration. To do this, run:
+gcloud compute config-ssh
+
+gcloud compute instances delete my-instance --zone us-central1-a
+
+
+// disque : https://cloud.google.com/compute/docs/disks/add-persistent-disk?authuser=1
+gcloud beta compute disks create [DISK_NAME] /
+    --size [DISK_SIZE] /
+    --type [DISK_TYPE] /
+    --physical-block-size [BLOCK_SIZE]
+
+gcloud compute instances attach-disk [INSTANCE_NAME] --disk [DISK_NAME]
+
+gcloud compute disks list

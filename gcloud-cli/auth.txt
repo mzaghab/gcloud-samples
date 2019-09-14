@@ -1,0 +1,2 @@
+gcloud config set account "account_name"
+gcloud auth revoke
